@@ -669,3 +669,149 @@ textarea {
     border-bottom: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════
+   MOBILE APP-LIKE IMPROVEMENTS
+   ═══════════════════════════════════════════════════ */
+
+/* Bottom safe-area padding for mobile devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-safe-bottom {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Mobile sticky booking CTA bar */
+.mobile-book-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  padding: 0.75rem 1rem;
+  background: rgba(26, 24, 20, 0.95);
+  border-top: 1px solid rgba(196, 169, 109, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Ensure touch targets are comfortable (44px minimum) */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slot card entrance animation */
+@keyframes slotFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slot-card-enter {
+  animation: slotFadeIn 0.3s var(--ease-out-expo) both;
+}
+
+/* Staggered slot card delays */
+.slot-card-enter:nth-child(1)  { animation-delay: 0.03s; }
+.slot-card-enter:nth-child(2)  { animation-delay: 0.06s; }
+.slot-card-enter:nth-child(3)  { animation-delay: 0.09s; }
+.slot-card-enter:nth-child(4)  { animation-delay: 0.12s; }
+.slot-card-enter:nth-child(5)  { animation-delay: 0.15s; }
+.slot-card-enter:nth-child(6)  { animation-delay: 0.18s; }
+.slot-card-enter:nth-child(7)  { animation-delay: 0.21s; }
+.slot-card-enter:nth-child(8)  { animation-delay: 0.24s; }
+.slot-card-enter:nth-child(9)  { animation-delay: 0.27s; }
+.slot-card-enter:nth-child(10) { animation-delay: 0.30s; }
+.slot-card-enter:nth-child(11) { animation-delay: 0.33s; }
+.slot-card-enter:nth-child(12) { animation-delay: 0.36s; }
+.slot-card-enter:nth-child(13) { animation-delay: 0.39s; }
+.slot-card-enter:nth-child(14) { animation-delay: 0.42s; }
+
+/* Success check pulse animation */
+@keyframes checkPulse {
+  0%   { transform: scale(0.6); opacity: 0; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.check-animate {
+  animation: checkPulse 0.5s var(--ease-out-spring) both;
+}
+
+/* Subtle cricket ball bounce for decorative use */
+@keyframes cricketBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  40%       { transform: translateY(-8px) rotate(120deg); }
+  70%       { transform: translateY(-4px) rotate(200deg); }
+}
+
+.cricket-ball-anim {
+  animation: cricketBounce 2.5s ease-in-out infinite;
+}
+
+/* Page section fade-in on scroll (CSS only — reduced motion safe) */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 0.5s var(--ease-out-expo) both;
+}
+
+/* Compact hero on mobile — ensure booking CTA is visible above fold */
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .hero-copy {
+    font-size: 0.9rem;
+  }
+
+  /* Give bottom space for mobile booking bar */
+  body.has-mobile-bar {
+    padding-bottom: 72px;
+  }
+}
+
+/* Smooth slot selection scale */
+.slot-card.selected {
+  border-color: var(--gold-light);
+  background: rgba(196, 169, 109, 0.15);
+  box-shadow: 0 0 0 2px var(--gold-light), 0 10px 30px rgba(196, 169, 109, 0.25);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Modal entrance override for smoother feel */
+.modal-overlay {
+  animation: fadeIn 0.18s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Improved mobile nav — hamburger-friendly header */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+}

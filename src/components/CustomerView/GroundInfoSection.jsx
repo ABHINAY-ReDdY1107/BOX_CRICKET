@@ -68,7 +68,7 @@ export const GroundInfoSection = () => {
           {/* Location */}
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs uppercase font-bold text-[#c4a96d] tracking-wider">
-              <MapPin className="w-4 h-4" /> Ground Address
+              <MapPin className="w-4 h-4" /> Ground Details
             </div>
             <div className="text-base font-bold text-white font-serif">
               {ground.name}
@@ -77,14 +77,14 @@ export const GroundInfoSection = () => {
               {ground.location}
             </p>
             <div className="text-[11px] text-emerald-400 font-semibold">
-              📍 Landmark: {ground.landmark}
+              📍 {ground.landmark}
             </div>
           </div>
 
           {/* Timings & Price */}
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs uppercase font-bold text-[#c4a96d] tracking-wider">
-              <Clock className="w-4 h-4" /> Operating Hours & Rate
+              <Clock className="w-4 h-4" /> Hours & Rate
             </div>
             <div className="text-sm font-bold text-white">
               Open Daily: {ground.timing}
@@ -100,19 +100,19 @@ export const GroundInfoSection = () => {
           {/* Contact Support */}
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs uppercase font-bold text-[#c4a96d] tracking-wider">
-              <Phone className="w-4 h-4" /> Ground Manager / Desk
+              <Phone className="w-4 h-4" /> Ground Contact
             </div>
             <div className="text-sm font-bold text-white">
-              Direct Phone Support
+              Direct Support
             </div>
             <div className="text-sm font-mono text-emerald-400 font-bold">
-              {ground.phone} / {ground.altPhone}
+              {ground.phone}
             </div>
             <a
               href={`tel:${ground.phone}`}
               className="inline-block mt-2 px-4 py-2 rounded-full bg-[#c4a96d] text-dark font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all"
             >
-              Call Ground Desk
+              Call Ground
             </a>
           </div>
         </div>

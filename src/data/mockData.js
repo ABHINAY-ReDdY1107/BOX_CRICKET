@@ -1,13 +1,13 @@
-// Ground Details & Mock Initial Data for Vikarabad Box Cricket
+// Ground Details & Mock Data — Generic Demo (customizable per turf owner)
 
 export const GROUND_DETAILS = {
-  name: "Vikarabad Box Cricket",
-  shortName: "VBC Turf",
+  name: "Box Cricket Arena",
+  shortName: "BC Arena",
   tagline: "Premier Day & Night Box Cricket Turf",
-  location: "Beside HP Petrol Pump, Ananthagiri Hills Road, Vikarabad, Telangana 501101",
-  landmark: "2 Mins from Ananthagiri Hills X-Road",
-  phone: "+91 98480 22334",
-  altPhone: "+91 94401 55667",
+  location: "Your Turf Address · City, State",
+  landmark: "Near Main Junction",
+  phone: "+91 98XXX XXXXX",
+  altPhone: "+91 94XXX XXXXX",
   pricePerHour: 600,
   currency: "₹",
   rating: 4.9,
@@ -182,7 +182,7 @@ export const getInitialBookings = (dates) => {
       amount: 600,
       status: "Confirmed",
       createdAt: "Today, 12:05 PM",
-      notes: "Vikarabad Strikers Club",
+      notes: "League match – regular group",
     },
     {
       id: "BXC-1027",

@@ -17,7 +17,7 @@ export const HeroBanner = ({ onBookClick }) => {
   const metrics = getDayMetrics(selectedDate);
 
   const handleShareTurf = () => {
-    const shareText = `🏏 *${ground.name}* (${ground.shortName})\n📍 ${ground.location}\n⚡ ₹${ground.pricePerHour}/hour slot\nCheck live slots & book directly: ${window.location.href}`;
+    const shareText = `🏏 *${ground.name}*\n⚡ ₹${ground.pricePerHour}/hour slot\nCheck live slots & book directly: ${window.location.href}`;
     if (navigator.share) {
       navigator.share({
         title: ground.name,
@@ -43,15 +43,15 @@ export const HeroBanner = ({ onBookClick }) => {
         <div className="lg:col-span-7 z-10">
           <div className="eyebrow flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            VIKARABAD, TELANGANA · LIVE TURF BOOKINGS
+            LIVE SLOT BOOKING · INSTANT DOUBLE-BOOKING PREVENTION
           </div>
 
           <h1 className="hero-title mt-2">
-            Play Your Best Match at <span className="text-[#c4a96d]">{ground.name}</span>
+            Book Your Best Match at <span className="text-[#c4a96d]">{ground.name}</span>
           </h1>
 
           <p className="hero-copy mt-4 max-w-xl">
-            Book slots online in real-time without phone calls. Instant double-booking prevention, 8x floodlit night arena, FIFA-grade 50mm turf, and complimentary match gear.
+            Reserve slots online in real-time without phone calls. Instant double-booking prevention, 8x floodlit night arena, FIFA-grade 50mm turf, and complimentary match gear.
           </p>
 
           {/* Quick Ground Highlights Badges */}
@@ -140,11 +140,11 @@ export const HeroBanner = ({ onBookClick }) => {
               {/* Pitch Illustration */}
               <div className="relative my-2 py-3 border-y border-emerald-500/20 text-center">
                 <div className="text-base font-serif font-bold text-white tracking-wide">
-                  Ananthagiri Hills Arena
+                  {ground.name}
                 </div>
                 <div className="text-[11px] text-slate-300 flex items-center justify-center gap-1 mt-0.5">
                   <MapPin className="w-3 h-3 text-[#c4a96d]" />
-                  Beside HP Petrol Pump, Vikarabad
+                  {ground.landmark}
                 </div>
               </div>
 

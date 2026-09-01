@@ -42,7 +42,7 @@ export const CustomerBookingPage = () => {
       {/* Marquee Ticker */}
       <div className="marquee">
         <div className="marquee-track">
-          <span>VIKARABAD BOX CRICKET</span>
+          <span>BOX CRICKET BOOKING</span>
           <i></i>
           <span>LIVE SLOT BOOKING</span>
           <i></i>
@@ -54,9 +54,9 @@ export const CustomerBookingPage = () => {
           <i></i>
           <span>₹600 / HOUR</span>
           <i></i>
-          <span>FIFAGRADE 50MM TURF</span>
+          <span>FIFA-GRADE 50MM TURF</span>
           <i></i>
-          <span>VIKARABAD BOX CRICKET</span>
+          <span>BOX CRICKET BOOKING</span>
           <i></i>
           <span>LIVE SLOT BOOKING</span>
           <i></i>
@@ -131,6 +131,18 @@ export const CustomerBookingPage = () => {
           onClose={() => setClashError(null)}
         />
       )}
+
+      {/* Mobile Sticky Book Bar — only visible on small screens */}
+      <div className="mobile-book-bar md:hidden">
+        <button
+          onClick={scrollToBooking}
+          className="button button-primary w-full gap-2 text-sm shadow-xl"
+          style={{ minHeight: '48px' }}
+        >
+          <CalendarCheck className="w-4 h-4 text-dark" />
+          BOOK A SLOT — ₹600/HR
+        </button>
+      </div>
     </div>
   );
 };

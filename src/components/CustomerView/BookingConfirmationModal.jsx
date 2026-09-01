@@ -7,7 +7,6 @@ import {
   User,
   Phone,
   Share2,
-  MapPin,
   X,
   MessageCircle,
   ExternalLink,
@@ -24,16 +23,15 @@ export const BookingConfirmationModal = ({ booking, onClose }) => {
   const displayDate = dateObj ? dateObj.fullDateDisplay : booking.date;
 
   const handleWhatsAppShare = () => {
-    const text = `🏏 *VIKARABAD BOX CRICKET — BOOKING CONFIRMATION*\n\n` +
+    const text = `🏏 *BOX CRICKET — BOOKING CONFIRMED* ✅\n\n` +
       `🎟️ *Booking ID:* ${booking.id}\n` +
       `👤 *Captain:* ${booking.customerName}\n` +
       `📅 *Date:* ${displayDate}\n` +
       `⏰ *Time Slot:* ${booking.time}\n` +
       `👥 *Players:* ${booking.playersCount} Players (${booking.matchType})\n` +
-      `💰 *Amount Payable at Turf:* ₹${booking.amount}\n` +
-      `📍 *Location:* ${ground.location}\n\n` +
+      `💰 *Amount:* ₹${booking.amount}\n\n` +
       `⚠️ *Note:* Please arrive 10 minutes before your slot. Metal spikes not allowed.\n` +
-      `📞 *Turf Contact:* ${ground.phone}`;
+      `Thank you for booking! 🏏`;
 
     const waUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(waUrl, '_blank');
@@ -57,13 +55,13 @@ export const BookingConfirmationModal = ({ booking, onClose }) => {
           </div>
 
           <div className="text-xs uppercase font-bold tracking-[0.2em] text-emerald-400">
-            Slot Reserved Successfully
+            Slot Reserved & Confirmed
           </div>
           <h2 className="text-3xl font-serif font-bold text-white mt-1">
             Booking Confirmed
           </h2>
           <div className="text-sm font-semibold text-[#c4a96d] mt-1">
-            {ground.name}
+            BOX CRICKET
           </div>
         </div>
 
@@ -119,10 +117,10 @@ export const BookingConfirmationModal = ({ booking, onClose }) => {
             </div>
           </div>
 
-          {/* Location & Instructions Bar */}
-          <div className="mt-4 pt-3 border-t border-dashed border-[#8b7340]/30 flex items-start gap-2 text-[11px] text-slate-300">
-            <MapPin className="w-4 h-4 text-[#c4a96d] shrink-0 mt-0.5" />
-            <span>{ground.location}</span>
+          {/* Arrival Note */}
+          <div className="mt-4 pt-3 border-t border-dashed border-[#8b7340]/30 flex items-start gap-2 text-[11px] text-slate-400">
+            <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+            <span>Present this pass at the ground. Arrive 10 mins early.</span>
           </div>
         </div>
 

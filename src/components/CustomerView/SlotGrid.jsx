@@ -128,7 +128,7 @@ export const SlotGrid = ({ selectedSlotId, onSelectSlot, onBookedSlotClick }) =>
               <div
                 key={slot.id}
                 onClick={() => onBookedSlotClick && onBookedSlotClick(slot, bookingInfo)}
-                className="slot-card booked relative overflow-hidden group hover:border-rose-500/40 transition-all cursor-not-allowed"
+                className="slot-card booked slot-card-enter relative overflow-hidden group hover:border-rose-500/40 transition-all cursor-not-allowed"
               >
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
@@ -165,7 +165,7 @@ export const SlotGrid = ({ selectedSlotId, onSelectSlot, onBookedSlotClick }) =>
               key={slot.id}
               type="button"
               onClick={() => onSelectSlot(slot)}
-              className={`slot-card ${isSelected ? 'selected' : 'available'} text-left w-full`}
+              className={`slot-card slot-card-enter ${isSelected ? 'selected' : 'available'} text-left w-full`}
             >
               <div className="flex items-center justify-between">
                 <span className="flex items-center gap-1.5 text-[11px] font-bold text-[#c4a96d] uppercase tracking-wider">

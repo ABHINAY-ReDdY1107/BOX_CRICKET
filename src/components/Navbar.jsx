@@ -47,7 +47,7 @@ export const Navbar = () => {
           </div>
           <div>
             <div className="text-xl font-bold tracking-tight text-white">
-              VIKARABAD <span className="text-[#c4a96d]">BOX CRICKET</span>
+              BOX <span className="text-[#c4a96d]">CRICKET</span>
             </div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-[#c4a96d]/80 -mt-1 font-sans">
               Slot Booking & Management Portal

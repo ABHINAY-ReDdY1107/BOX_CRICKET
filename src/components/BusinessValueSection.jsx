@@ -24,13 +24,13 @@ export const BusinessValueSection = () => {
         {/* Main Pitch Hero Header */}
         <div className="text-center max-w-3xl mx-auto">
           <div className="eyebrow justify-center text-xs text-[#c4a96d]">
-            EXECUTIVE VALUE PROPOSITION FOR BOX CRICKET OWNER
+            EXECUTIVE VALUE PROPOSITION FOR BOX CRICKET OWNERS
           </div>
           <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mt-2">
-            "Anna, Stop Answering 50 Phone Calls A Day."
+            "Stop Answering 50 Phone Calls A Day."
           </h1>
           <p className="text-base text-slate-300 mt-4 leading-relaxed font-light">
-            Instead of customers repeatedly calling you during dinner and match hours to ask <span className="text-[#c4a96d] font-semibold">"Anna, 7 PM slot open unda?"</span>, they open this digital portal, see live slots, and book instantly.
+            Instead of customers repeatedly calling during dinner and match hours to ask <span className="text-[#c4a96d] font-semibold">"Boss, 7 PM slot open unda?"</span>, they open this digital portal, see live slots, and book instantly.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export const BusinessValueSection = () => {
             <div className="flex items-center justify-between pb-4 border-b border-[#8b7340]/25 mb-6">
               <div className="flex items-center gap-2.5 text-emerald-400 font-bold uppercase tracking-wider text-xs">
                 <CheckCircle2 className="w-5 h-5" />
-                <span>The New Vikarabad Box Cricket Portal</span>
+                <span>The Digital Box Cricket Booking Portal</span>
               </div>
               <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
                 100% Automated
@@ -164,7 +164,7 @@ export const BusinessValueSection = () => {
           <div className="p-6 rounded-3xl bg-[#1c1813] border border-[#8b7340]/25">
             <div className="text-xs uppercase font-bold tracking-wider text-[#c4a96d] mb-2 flex items-center gap-2">
               <TrendingUp className="w-4 h-4" />
-              What Anna (Ground Owner) Gets
+              What Ground Owners Get
             </div>
             <h3 className="text-xl font-serif font-bold text-white mb-4">
               Complete Control with Peace of Mind

@@ -23,11 +23,11 @@ export const Footer = () => {
               <Trophy className="w-4 h-4 text-[#1a1814]" />
             </div>
             <span className="text-xl font-bold font-serif text-white">
-              VIKARABAD <span className="text-[#c4a96d]">BOX CRICKET</span>
+              BOX <span className="text-[#c4a96d]">CRICKET</span>
             </span>
           </div>
           <p className="text-xs text-slate-400 max-w-sm">
-            {ground.tagline} · Premier sports turf in Vikarabad, Telangana. Real-time online reservations and turf management.
+            {ground.tagline} · Real-time online slot booking & turf management for any sports ground.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export const Footer = () => {
             onClick={() => setActiveView('customer')}
             className="text-slate-300 hover:text-[#c4a96d] transition-colors"
           >
-            Customer Booking
+            Book a Slot
           </button>
           <button
             onClick={() => setActiveView('owner')}
@@ -49,7 +49,7 @@ export const Footer = () => {
             onClick={() => setActiveView('split')}
             className="text-slate-300 hover:text-[#c4a96d] transition-colors"
           >
-            Split-Screen Demo
+            Live Demo
           </button>
           <button
             onClick={() => setActiveView('pitch')}
@@ -63,17 +63,16 @@ export const Footer = () => {
       {/* Footer Bottom Bar */}
       <div className="max-w-6xl mx-auto w-full footer-bottom flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 pt-4 border-t border-[#8b7340]/15">
         <div>
-          © 2026 {ground.name}. All Rights Reserved. Demo Prototype for Pitch Meeting.
+          © 2026 Box Cricket Booking Platform. Demo Prototype.
         </div>
         <div className="flex items-center gap-4">
           <button
             onClick={resetDemoData}
             className="text-[#c4a96d] hover:underline flex items-center gap-1"
           >
-            <RotateCcw className="w-3 h-3" /> Reset Demo State
+            <RotateCcw className="w-3 h-3" /> Reset Demo
           </button>
           <span>Rate: ₹{ground.pricePerHour}/Hour</span>
-          <span>Vikarabad, Telangana</span>
         </div>
       </div>
     </footer>
