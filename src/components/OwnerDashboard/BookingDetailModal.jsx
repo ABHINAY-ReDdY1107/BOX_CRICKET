@@ -24,16 +24,15 @@ export const BookingDetailModal = ({ booking, onClose }) => {
   const displayDate = dateObj ? dateObj.fullDateDisplay : booking.date;
 
   const handleWhatsAppReminder = () => {
-    const text = `🏏 *VIKARABAD BOX CRICKET — MATCH REMINDER*\n\n` +
-      `Hello ${booking.customerName} anna,\n` +
-      `This is a quick reminder for your upcoming box cricket match:\n\n` +
+    const text = `🏏 *BOX CRICKET — MATCH REMINDER*\n\n` +
+      `Hello ${booking.customerName},\n` +
+      `This is a quick reminder for your upcoming match:\n\n` +
       `📅 *Date:* ${displayDate}\n` +
       `⏰ *Time Slot:* ${booking.time}\n` +
-      `🎟️ *Booking ID:* ${booking.id}\n` +
-      `📍 *Location:* ${ground.location}\n\n` +
-      `Please ensure your squad arrives 10 minutes prior. See you on the turf!`;
+      `🎟️ *Booking ID:* ${booking.id}\n\n` +
+      `Please ensure your squad arrives 10 minutes prior. See you on the turf! 🏏`;
 
-    window.open(`https://wa.me/91${booking.rawPhone || '9848022334'}?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/91${booking.rawPhone || '9876543210'}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
